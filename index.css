@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding-top: 84px;
+  /* nếu header cao 80px */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 84px !important;
+}
+
+button {
+  all: unset;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  /* hoặc màu bạn muốn */
+  transition: top 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  /* Cách đều ba phần */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  height: 80px;
+  /* Chiều cao tùy chỉnh */
+  /* Màu nền tùy chọn */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding-inline: 32px;
+}
+
+.hidden-header {
+  top: -100px;
+  /* cho header chạy lên trên, ẩn đi */
+}
+
+main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.subnav img {
+  margin: 0 10px;
+  font-size: 10px;
+}
+
+.nav-item {
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.underline {
+  margin-top: -10px;
+  border: 1px solic black;
+  background-color: black;
+  height: 0.75px;
+  width: 50%;
+  display: none;
+}
+
+nav {
+  display: flex;
+}
+
+.subnav>a>img {
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  nav {
+    display: none;
+  }
+
+  .subscribe-form input {
+    flex: 1;
+    padding: 10px;
+    border: black;
+    border-radius: 4px;
+    max-width: 150px;
+  }
+}
+
+.menu-icon {
+  position: relative;
+  top: -2px;
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .menu-icon {
+    position: relative;
+    top: -2px;
+    display: inline;
+  }
+}
+
+.nav-item.active .underline {
+  display: block;
+}
+
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  width: 20px;
+  cursor: pointer;
+}
+
+#cart-amount {
+  position: absolute;
+  left: 3px;
+  bottom: -8px;
+  width: 16px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  aspect-ratio: 1/1;
+  line-height: 16px;
+  border-radius: 100%;
+  font-size: 8px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  display: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.dropdown p {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown p:hover {
+  background-color: #f0f0f0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1100;
+  height: 200px;
+  background-color: white;
+  width: 0;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+.mobile-nav>div {
+  display: none;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.mobile-nav>div>div {
+  display: flex;
+  color: #374151;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.mobile-nav>div>div>p {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.mobile-nav>div>div>img {
+  transform: rotate(180deg);
+}
+
+.mobile-nav>div>a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  font-weight: 550;
+  color: black;
+}
+
+.link-menu.active {
+  background-color: black;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  /* === BẮT ĐẦU PHẦN QUAN TRỌNG CẦN BỔ SUNG === */
+  position: fixed;
+  /*Cố định header ở đầu trang */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  /* Đảm bảo header có nền trắng */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  /*Hiệu ứng trượt mượt mà*/
+  transition: top 0.4s ease-in-out;
+  /* === KẾT THÚC PHẦN BỔ SUNG === */
+}
+
+/* 3. Thêm class này để định nghĩa trạng thái "bị ẩn" */
+header.header-hidden {
+  top: -80px;
+  /* Di chuyển header lên trên, ra khỏi màn hình */
+}
+
+/* footer */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: #f6f6f6;
+  color: black;
+  padding: 40px 0px;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 0px;
+  /* khoảng cách ngang giữa các cột */
+  row-gap: 30px;
+  /* khoảng cách dọc nếu xuống hàng */
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.footer-column {
+  flex: 0 1 22%;
+  /* mỗi cột chiếm khoảng 22% chiều ngang */
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  color: black;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0px;
+  /* khoảng cách giữa input và nút */
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 10px;
+  border: black;
+  border-radius: 4px;
+  width: 220px;
+}
+
+.subscribe-form button {
+  padding: 10px 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.subscribe-form button:hover {
+  background-color: #e85c50;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: black;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: brown;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #d3d3d3;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.payment-icons {
+  margin-bottom: 10px;
+}
+
+.payment-icons i {
+  margin: 0 6px;
+  font-size: 24px;
+  color: black;
+}
+
+
+.social-icons i.fa-facebook-f {
+  color: blue;
+}
+
+.social-icons i.fa-instagram {
+  color: #e95950;
+}
+
+.social-icons i.fa-youtube {
+  color: red;
+}
+
+.social-icons i.fa-tiktok {
+  color: black;
+}
+
+.payment-icons i.fa-cc-visa {
+  color: rgb(54, 54, 222);
+}
+
+.payment-icons i.fa-cc-mastercard {
+  color: #eb001b;
+}
+
+.payment-icons i.fa-cc-paypal {
+  color: #003087;
+}
+
+.payment-icons i.fa-google-pay {
+  color: #bf9004;
+}
+
+.payment-icons i.fa-cc-apple-pay {
+  color: #000;
+}
+
+.footer-column-subscribe>h4 {
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.pop-up {
+  background: #ff5722;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
