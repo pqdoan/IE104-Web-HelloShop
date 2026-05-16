@@ -1,0 +1,157 @@
+@media (min-width: 640px) {
+  .cart-ontainer {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .cart-container {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cart-container {
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+}
+
+#cart-page-container {
+    display: none;
+}
+
+#cart-page-container.active {
+    display: block;
+}
+
+.cart-item {
+    padding-block: 16px; 
+    display: grid;
+    grid-template-columns: 4fr 0.5fr 0.5fr;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 640px) {
+    .cart-item {
+    grid-template-columns: 4fr 2fr 0.5fr;
+}
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.cart-item-image {
+    width: 80px;
+}
+
+.div-info > p {
+    font-size: 18px;
+    line-height: 1.75/1.25;
+    font-weight: 500;
+    margin: 0;
+}
+
+.size-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.size-cart-item {
+    margin: 0;
+    padding: 4px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item > input {
+    max-width: 30px;
+    padding-inline: 8px;
+    padding-block: 4px;
+}
+
+@media (min-width: 640px) {
+    .cart-item > input {
+        max-width: 40px;
+        padding-inline: 8px;
+        padding-block: 4px;
+    }
+}
+
+.cart-item > img {
+    margin-right: 16px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.total-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.total-title {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.cart-total {
+    width: 300px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.procedd {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#empty-cart {
+  display: none;
+}
+
+#empty-cart p {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+#empty-cart.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+    .sub-empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .shop {
+        margin-left: 30px;
+    }
+}
+
+
+

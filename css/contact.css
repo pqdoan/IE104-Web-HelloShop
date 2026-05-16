@@ -1,0 +1,296 @@
+/* CONTACT CSS */
+
+/* SECTION HERO */
+.section-hero {
+  background: radial-gradient(#fff, #ffd6d6);
+  padding: 15px 70px;
+}
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-hero .content-1 {
+  background: #ff6e3b;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  width: fit-content;
+  align-items: center;
+  font-weight: 600;
+}
+
+.contact-hero .content-2 {
+  font-size: 55px;
+  font-weight: 800;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.contact-hero .content-3 {
+  font-size: 20px;
+  color: #555;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 0;
+}
+
+/* CONTACT CARDS */
+.contact-cards {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-cards .inner-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 5px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(100%/4 - 70px);
+}
+
+.contact-cards .inner-card h3 {
+  font-size: 22px;
+  color: #333;
+}
+
+.contact-cards .inner-card .card-desc {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.contact-cards .inner-card .icon {
+  padding: 20px;
+  font-size: 30px;
+  border: 1px solid #ccc;
+  border-radius: 30%;
+  background: #ff6e3b;
+  color: #fff;
+}
+.contact-cards .inner-card .link {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  color: #ff6e3b;
+  font-weight: 600;
+  text-decoration: none;
+}
+/* END CONTACT CARDS */
+/* END SECTION HERO */
+
+/* SECTION ONE */
+.section-one {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  padding-right: 50px;
+  padding-top: 30px;
+}
+
+/* ẢNH BÊN TRÁI */
+.contact-image {
+  background-size: cover;
+  background-position: right;
+  width: 50%;
+}
+
+/* FORM BÊN PHẢI */
+.contact-wrap {
+  width: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px 50px;
+}
+
+/* CONTENT */
+.contact-content h3 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.contact-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 2.2;
+  word-spacing: 1.6px;
+}
+
+/* FORM */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* thêm để responsive */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff8888;
+}
+
+/* SUBMIT */
+.submit {
+  width: 30%;
+  background-color: #ff6e3b;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  background: #000;
+}
+/* END SECTION ONE */
+
+/* SECTION TWO */
+.section-two {
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info .info-1,
+.contact-info .info-2 {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.contact-info h3 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+/* END SECTION TWO */
+
+/* Location */
+.section-location {
+  padding-top: 10px;
+  padding-bottom: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.section-location .location-desc {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-location .location-desc h3 {
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-location .location-desc p {
+  font-size: 18px;
+  color: #555;
+}
+
+.section-location .location-map {
+  padding: 0px 100px;
+}
+
+.section-location .location-map iframe {
+  border-radius: 15px;
+}
+/* END Location */
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-info .info-1,
+  .contact-info .info-2 {
+    flex: 1 1 100%;
+  }
+
+  #contact-100 {
+    display: none !important;
+  }
+
+  .section-one {
+    background-color: white !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
