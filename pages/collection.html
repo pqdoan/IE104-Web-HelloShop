@@ -1,0 +1,62 @@
+<div class="collection">
+    <!-- Search bar -->
+    <div id="search-container" style="display: none; align-items: center; justify-content: center;">
+        <div
+            style="display: flex; align-items: center; margin-inline: 12px; margin-block: 20px; width: 50%; border: 1px solid #d3d3d3; padding: 8px 20px; border-radius: 30px;">
+            <input oninput="setSearch(event)" id="search-bar" placeholder="Search" style="width: 100%; border: none;"
+                type="text">
+            <img width="16" src="./assets/search_icon.png" alt="">
+        </div>
+        <img style="cursor: pointer;" onclick="closeSearch()" width="12" src="../assets/cross_icon.png" alt="">
+    </div>
+    <div class="collection-container">
+        <!-- Left side -->
+        <div class="collection-filter">
+            <p id="col-filters" onclick="openAndCloseFilter()">FILTERS</p>
+            <img onclick="openAndCloseFilter()" id="drd-icon" src="../assets/dropdown_icon.png" alt="">
+            <div id="ft1" class="categories">
+                <p id="col-category">CATEGORIES</p>
+                <div class="select-categories">
+                    <p>
+                        <input onclick="setCategory(event)" value="Men" type="checkbox"> <span id="col-men">Men</span>
+                    </p>
+                    <p>
+                        <input onclick="setCategory(event)" value="Women" type="checkbox"> <span id="col-women">Women</span>
+                    </p>
+                    <p>
+                        <input onclick="setCategory(event)" value="Kids" type="checkbox"> <span id="col-kid">Kids</span>
+                    </p>
+                </div>
+            </div>
+            <div id="ft2" class="type">
+                <p id="type">TYPE</p>
+                <div class="select-type">
+                    <p>
+                        <input onclick="setSubCategory(event)" value="Topwear" type="checkbox"> <span id="col-top">Topwear</span>
+                    </p>
+                    <p>
+                        <input onclick="setSubCategory(event)" value="Bottomwear" type="checkbox"> <span id="col-bot">Bottomwear</span>
+                    </p>
+                    <p>
+                        <input onclick="setSubCategory(event)" value="Winterwear" type="checkbox"> <span id="col-win">Winterwear</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="collection-container-products">
+            <div class="title-and-sort">
+                <h2 id="col-all">All Collection</h2>
+                <!-- Products sort -->
+                <select onchange="sortProduct(event)">
+                    <option id="col-rel" value="Relavent">Sort by: Relavent</option>
+                    <option id="col-low" value="High">Sort by: Low to High</option>
+                    <option  id="col-high" value="Low">Sort by: High to Low</option>
+                </select>
+            </div>
+            <!-- All products -->
+            <div id="all-collection">
+            </div>
+        </div>
+    </div>
+</div>

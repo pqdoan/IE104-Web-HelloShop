@@ -1,0 +1,105 @@
+<div style="display: flex;" class="admin-container" style="height: 1000px;">
+    <!-- Chọn chức năng -->
+    <div style="display: flex; flex-direction: column; width: 18%; border-right: 2px solid #d3d3d3; min-height: 700px;">
+        <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 30px; padding-top: 20px;">
+            <button onclick="renderAddPage(this)" class="admin-change">
+                <img src="../assets/add_icon.png" alt="">
+                <p id="admin-1">Add items</p>
+            </button>
+            <button onclick="renderListPage(this)" class="admin-change">
+                <img src="../assets/order_icon.png" alt="">
+                <p id="admin-2">List items</p>
+            </button>
+            <button onclick="renderOrdersPage(this)" class="admin-change">
+                <img src="../assets/order_icon.png" alt="">
+                <p id="admin-3">Orders</p>
+            </button>
+        </div>
+    </div>
+    <!-- Ban đầu là add product, sẽ đổi khi admin chọn chức năng tương ứng -->
+    <div style="width: 70%;">
+        <form onsubmit="adminAddProduct(event)" id="admin-display" style="margin-top: 40px; margin-left: 60px; width: 100%;">
+            <p id="admin-4">Upload Image</p>
+            <div style="display: flex; gap: 8px;">
+                <label for="image1">
+                    <img id="img-1-admin" width="100px" src="../assets/upload_area.png" alt="">
+                    <input onchange="previewImage(this,1)" id="image1" style="display: none;" type="file">
+                </label>
+                <label for="image2">
+                    <img id="img-2-admin" width="100px" src="../assets/upload_area.png" alt="">
+                    <input onchange="previewImage(this,2)" id="image2" style="display: none;" type="file">
+                </label>
+                <label for="image3">
+                    <img id="img-3-admin" width="100px" src="../assets/upload_area.png" alt="">
+                    <input onchange="previewImage(this,3)" id="image3" style="display: none;" type="file">
+                </label>
+                <label for="image4">
+                    <img id="img-4-admin" width="100px" src="../assets/upload_area.png" alt="">
+                    <input onchange="previewImage(this,4)" id="image4" style="display: none;" type="file">
+                </label>
+            </div>
+            <p id="admin-5">Product name</p>
+            <input id="add-name" placeholder="Type here"
+                style="max-width: 500px; width: 100%; padding: 8px 12px; border: 1.5px solid #d3d3d3; border-radius: 4px;"
+                type="text" required>
+            <p id="admin-6">Product decscription</p>
+            <textarea id="add-desc" placeholder="Write content here"
+                style="height: 60px; max-width: 500px; width: 100%; padding: 8px 12px; border: 1.5px solid #d3d3d3; border-radius: 4px;"
+                type="text" required></textarea>
+            <div id="admin-100" style="display: flex; gap: 30px;">
+                <div>
+                    <p id="admin-7">Product category</p>
+                    <select id="add-category" class="input-admin" style="width: 100%;" name="">
+                        <option id="admin-8" value="Men">Men</option>
+                        <option id="admin-9" value="Women">Women</option>
+                        <option id="admin-10" value="Kids">Kids</option>
+                    </select>
+                </div>
+                <div>
+                    <p id="admin-">Sub category</p>
+                    <select id="add-subcategory" class="input-admin" style="width: 100%;" name="">
+                        <option id="admin-11" value="Topwear">Topwear</option>
+                        <option id="admin-12" value="Bottomwear">Bottomwear</option>
+                        <option id="admin-13" value="Winterwear">Winterwear</option>
+                    </select>
+                </div>
+                <div>
+                    <p id="admin-14">Product Price</p>
+                    <input id="add-price" value="100" class="input-admin" type="number">
+                </div>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p id="admin-15">Product Sizes</p>
+                <div style="display: flex; gap: 8px;">
+                    <div style="display: flex; gap: 8px;">
+                        <p onclick="adminChooseSizes(this)"
+                            style="padding: 8px 14px; cursor: pointer; background-color: oklch(0.929 0.013 255.508); margin: 0;">
+                            S
+                        </p>
+                        <p onclick="adminChooseSizes(this)"
+                            style="padding: 8px 14px; cursor: pointer; background-color: oklch(0.929 0.013 255.508); margin: 0;">
+                            M
+                        </p>
+                        <p onclick="adminChooseSizes(this)"
+                            style="padding: 8px 14px; cursor: pointer; background-color: oklch(0.929 0.013 255.508); margin: 0;">
+                            L
+                        </p>
+                        <p onclick="adminChooseSizes(this)"
+                            style="padding: 8px 14px; cursor: pointer; background-color: oklch(0.929 0.013 255.508); margin: 0;">
+                            XL
+                        </p>
+                        <p onclick="adminChooseSizes(this)"
+                            style="padding: 8px 14px; cursor: pointer; background-color: oklch(0.929 0.013 255.508); margin: 0;">
+                            XXL
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input id="add-bestseller" value="yes" type="checkbox">
+                <span id="admin-16">Add to bestseller</span>
+            </div>
+            <button id="admin-17" class="btn">ADD</button>
+        </form>
+    </div>
+</div>
